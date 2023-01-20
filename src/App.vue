@@ -1,14 +1,15 @@
 <template>
-  <div>
+  <div class="container">
     <SearchBar @termChange="onTermChange"></SearchBar>
-    <VideoList></VideoList>
-    {{ videos.length }}
+    <VideoList :videos="videos"></VideoList>
   </div>
 </template>
+
 <script>
 import axios from "axios";
 import SearchBar from "./components/SearchBar";
 import VideoList from "./components/VideoList";
+
 const API_KEY = "AIzaSyAtbDG8wXzKSnYVn6qpunmcTiASOmGInNY";
 
 export default {
